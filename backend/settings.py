@@ -22,7 +22,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'ckeditor',
-    'places'
+    'places',
+    'api'
 ]
 
 MIDDLEWARE = [
@@ -40,6 +41,7 @@ ROOT_URLCONF = 'backend.urls'
 
 TEMPLATES_DIRS = BASE_DIR / 'templates'
 
+STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]
@@ -98,7 +100,5 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-
-STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

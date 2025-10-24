@@ -1,13 +1,16 @@
 from django import forms
 from django.contrib import admin
 from django.utils.html import format_html
+from django.utils.translation import gettext_lazy
 from ckeditor.widgets import CKEditorWidget
 
 from places.models import Place, Image
 
 
 class PlaceAdmminForm(forms.ModelForm):
-    description_long = forms.CharField(widget=CKEditorWidget())
+    description_long = forms.CharField(
+        widget=CKEditorWidget(), label=gettext_lazy('Полное описание')
+    )
 
     class Meta:
         model = Place

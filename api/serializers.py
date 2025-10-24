@@ -4,6 +4,9 @@ from places.models import Place
 
 
 class PlaceSerializer(serializers.ModelSerializer):
+    title = serializers.CharField()
+    description_short = serializers.CharField()
+    description_long = serializers.CharField()
     imgs = serializers.SerializerMethodField()
     coordinates = serializers.SerializerMethodField()
 

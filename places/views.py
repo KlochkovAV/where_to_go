@@ -21,7 +21,7 @@ def index_view(request):
             "properties": {
                 "title": object.title,
                 "placeId": object.id,
-                "detailsUrl": url   
+                "detailsUrl": url
             }
         }
         features.append(place)
