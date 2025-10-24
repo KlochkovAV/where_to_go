@@ -22,6 +22,8 @@
 python manage.py load_place url_файла
 ```
 
+Посмотреть проект можно по ссылке: https://klochkovav.pythonanywhere.com/
+
 ---
 
 ## Установка
