@@ -32,7 +32,7 @@ python manage.py load_place url_файла
 
 ```
 git clone https://github.com/KlochkovAV/where_to_go.git
-cd where_to_go/backend
+cd where_to_go
 ```
 
 2. Создайте и активируйте виртуальное окружение:
@@ -40,21 +40,38 @@ cd where_to_go/backend
 ```
 python -m venv venv
 source venv/bin/activate  # Linux/macOS
-venv\Scripts\activate     # Windows
+source venv\Scripts\activate     # Windows
 ```
 
-3. Установите зависимости:
+3. Обновите pip:
+
+```
+python -m pip install --upgrade pip
+```
+
+4. Установите зависимости:
 
 ```
 pip install -r requirements.txt
 ```
 
-4. Выполните миграции базы данных:
+5. Выполните миграции базы данных:
 
 ```
 python manage.py migrate
 ```
 
+6. Соберите статику:
+
+```
+python manage.py collectstatic
+```
+
+7. Создайте файл с переменными окружения SECRET_KEY, ALLOWED_HOSTS и DEBUG:
+
+```
+touch .env
+```
 ---
 
 ## Запуск
